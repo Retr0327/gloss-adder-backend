@@ -3,7 +3,7 @@ import Koa from "koa";
 import cors from "@koa/cors";
 import koaBody from "koa-body";
 import corsConfig from "./helpers/corsConfig";
-import { UPLOAD_DIR } from "./constants/constants";
+import { UPLOAD_DIR } from "./constants";
 import { uploadGloss } from "./routes/uploadGloss";
 
 if (!fs.existsSync(UPLOAD_DIR)) {
