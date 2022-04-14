@@ -1,3 +1,3 @@
-import { uploadGloss } from "../routes/uploadGloss";
+import handleUploadGloss from "./uploadGloss";
 
-export { uploadGloss };
+export { handleUploadGloss };
