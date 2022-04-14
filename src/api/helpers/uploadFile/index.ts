@@ -1,3 +1,4 @@
 import parseRequestFiles from "./parseRequestFiles";
+import createUploadFiles from "./createUploadFiles";
 
-export { parseRequestFiles };
+export { parseRequestFiles, createUploadFiles };
