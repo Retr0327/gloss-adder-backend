@@ -1,3 +1,4 @@
 import checkHasToken from "./checkHasToken";
+import checkHasFile from "./checkHasFile";
 
-export { checkHasToken };
+export { checkHasToken, checkHasFile };

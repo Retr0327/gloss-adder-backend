@@ -1,9 +1,9 @@
 import KoaRouter from "@koa/router";
-import { checkHasToken } from "../middlewares";
 import { handleUploadGloss } from "../controllers";
+import { checkHasToken, checkHasFile } from "../middlewares";
 
 const router = new KoaRouter();
 
-router.post("/uploadGloss", checkHasToken, handleUploadGloss);
+router.post("/uploadGloss", checkHasFile, checkHasToken, handleUploadGloss);
 
 export { router as uploadGloss };
