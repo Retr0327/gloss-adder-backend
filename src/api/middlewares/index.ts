@@ -1,4 +1,5 @@
-import checkHasToken from "./checkHasToken";
+import cacheFile from "./cacheFile";
 import checkHasFile from "./checkHasFile";
+import checkHasToken from "./checkHasToken";
 
-export { checkHasToken, checkHasFile };
+export { checkHasToken, checkHasFile, cacheFile };
