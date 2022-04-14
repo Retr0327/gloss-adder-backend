@@ -1,11 +1,12 @@
-import cors, { Options } from "@koa/cors";
-
-const whitelList: string[] = ["http://localhost:3000", "http://localhost:3001"];
+import { Options } from "@koa/cors";
 
 const corsConfig: Options = {
   origin: (ctx) => {
-    console.log(ctx);
-    return "*";
+    if (ctx.url === "/") {
+      return "*";
+    }
+
+    return "http://localhost:3001";
   },
   credentials: true,
   allowMethods: ["GET", "POST"],
