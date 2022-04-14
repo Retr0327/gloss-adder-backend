@@ -21,28 +21,7 @@ const cacheFile = async (ctx: Context, next: Next) => {
   ]);
 
   return next();
-
-  // const requestFiles = Object.entries(ctx.request.files!).reduce(
-  //   (acc, cur: any, i) => {
-  //     const [fileName, dataForm] = cur;
-  //     const tmpPath = dataForm["path"];
-  //     acc[fileName] = fs.readFileSync(tmpPath);
-
-  //     fs.unlink(tmpPath, (error) => {
-  //       console.log(error);
-  //     });
-  //     return acc;
-  //   },
-  //   {} as any
-  // );
-
-  // await Promise.all([
-  //   redisCli.hset(token, requestFiles),
-  //   redisCli.expire(token, ONE_HOUR),
-  // ]);
-
-  // const bufferResult = await redisCli.hgetallBuffer("1649940131630");
-
+  
   // const arrayOfFiles = Object.entries(bufferResult).map((value) => {
   //   const [timeStringName, buffer] = value;
   //   const fileName = timeStringName.match(/(?<=\d\-\d\-).*/g)![0];
