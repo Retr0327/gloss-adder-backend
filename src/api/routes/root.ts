@@ -3,8 +3,9 @@ import KoaRouter from "@koa/router";
 const router = new KoaRouter();
 
 router.get("/", (ctx) => {
-  console.log(ctx);
-  ctx.body = { message: "success" };
+  const ip = ctx.request.ip;
+  ctx.status = 200;
+  ctx.body = { message: "success", ip };
 });
 
 export { router as rootRoute };
