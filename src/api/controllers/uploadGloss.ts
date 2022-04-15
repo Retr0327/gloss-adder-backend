@@ -13,7 +13,7 @@ const handleUploadGloss = async (ctx: Context) => {
   await glossModify(token, cliticOption);
 
   ctx.status = 200;
-  ctx.body = { status: "success", token, message: "uploaded" };
+  ctx.body = { status: "success", message: "uploaded" };
 };
 
 export default handleUploadGloss;
