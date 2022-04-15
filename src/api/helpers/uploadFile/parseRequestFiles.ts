@@ -10,7 +10,9 @@ function parseRequestFiles(ctx: Context) {
     acc[fileName] = fs.readFileSync(tmpPath);
 
     fs.unlink(tmpPath, (error) => {
-      console.log(error);
+      if (error) {
+        console.log(error);
+      }
     });
 
     return acc;
