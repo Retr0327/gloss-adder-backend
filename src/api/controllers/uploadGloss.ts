@@ -10,7 +10,7 @@ const handleUploadGloss = async (ctx: Context) => {
   await saveUploadFiles(token, bufferResult);
 
   ctx.status = 200;
-  ctx.body = { status: "success" };
+  ctx.body = { status: "success", token, message: "uploaded" };
 };
 
 export default handleUploadGloss;
