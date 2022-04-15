@@ -19,6 +19,10 @@ async function saveUploadFiles(token: string, bufferResult: bufferResultType) {
 
     return { fileName, data: buffer };
   });
+
+  arrayOfFiles.reduce((curFile: any, nextFile) => {
+    writeUploadFile(uploadLocation, nextFile).then();
+  }, writeUploadFile);
 }
 
 export default saveUploadFiles;
