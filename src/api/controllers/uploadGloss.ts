@@ -12,8 +12,21 @@ const handleUploadGloss = async (ctx: Context) => {
 
   await glossModify(token, cliticOption);
 
+  let firstFileName: any;
+
+  if (Object.keys(bufferResult).length > 1) {
+    firstFileName = token;
+  } else {
+    firstFileName = Object.keys(bufferResult)[0].match(/\b[^\d\-]+\b/g);
+  }
+
   ctx.status = 200;
-  ctx.body = { status: "success", token, message: "uploaded" };
+  ctx.body = {
+    status: "success",
+    token,
+    firstFileName,
+    message: "uploaded",
+  };
 };
 
 export default handleUploadGloss;
