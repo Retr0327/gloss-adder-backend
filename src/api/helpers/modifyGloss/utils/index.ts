@@ -1,4 +1,4 @@
-import writeGloss from "./writeGloss.js";
-import GlossAdder from "./glossAdder.js";
+import writeGloss from "./writeGloss";
+import GlossAdder from "./glossAdder";
 
 export { writeGloss, GlossAdder };
