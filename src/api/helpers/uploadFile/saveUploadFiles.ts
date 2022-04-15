@@ -3,7 +3,7 @@ import { getUploadFileDir } from "../../constants";
 
 type bufferResultType = [field: Buffer, value: Buffer][];
 
-async function createUploadFiles(
+async function saveUploadFiles(
   token: string,
   bufferResult: bufferResultType
 ) {
@@ -25,4 +25,4 @@ async function createUploadFiles(
   return null;
 }
 
-export default createUploadFiles;
+export default saveUploadFiles;
