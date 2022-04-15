@@ -1,11 +1,6 @@
 import fs from "fs";
 
-type FileType = {
-  fileName: string;
-  data: Buffer;
-};
-
-function writeUploadFile(uploadLocation: string, file: FileType) {
+function writeUploadFile(uploadLocation: string, file: any) {
   return new Promise<void>((resolve, reject) => {
     fs.writeFile(
       `${uploadLocation}/${file.fileName}`,
