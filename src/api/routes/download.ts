@@ -5,4 +5,4 @@ const router = new KoaRouter();
 
 router.post("/download:token", handleDownload);
 
-export { router as uploadGloss };
+export { router as download };
