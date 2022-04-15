@@ -2,8 +2,8 @@ import fs from "fs";
 import Koa from "koa";
 import cors from "@koa/cors";
 import koaBody from "koa-body";
-import corsConfig from "./helpers/corsConfig";
 import { UPLOAD_DIR } from "./constants";
+import corsConfig from "./helpers/corsConfig";
 import { rootRoute, uploadGloss } from "./routes";
 
 if (!fs.existsSync(UPLOAD_DIR)) {
