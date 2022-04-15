@@ -1,11 +1,11 @@
 import fs from "fs";
 import writeUploadFile from "./writeUploadFile";
-import { getUploadFileDir } from "../../constants";
+import { getUploadedFileDir } from "../../constants";
 
 type bufferResultType = [field: Buffer, value: Buffer][];
 
 async function saveUploadFiles(token: string, bufferResult: bufferResultType) {
-  const uploadLocation = getUploadFileDir(token);
+  const uploadLocation = getUploadedFileDir(token);
 
   fs.mkdir(uploadLocation, { recursive: true }, (error) => {
     if (error) {
