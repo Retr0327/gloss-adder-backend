@@ -3,7 +3,7 @@ import redisCli from "../models/redisCli";
 import { saveUploadFiles } from "../helpers/uploadFile";
 
 const handleUploadGloss = async (ctx: Context) => {
-  const { token } = ctx.request.body;
+  const { token, cliticOption } = ctx.request.body;
 
   const bufferResult = await redisCli.hgetallBuffer(token);
 
