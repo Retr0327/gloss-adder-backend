@@ -1,4 +1,5 @@
 import { promises as fs } from "fs";
+import { BufferEncoding } from "types";
 
 class GlossReader {
   fileName: string;
