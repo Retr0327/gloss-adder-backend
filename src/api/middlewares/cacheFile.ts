@@ -25,25 +25,6 @@ const cacheFile = async (ctx: Context, next: Next) => {
   ]);
 
   return next();
-
-  // const arrayOfFiles = Object.entries(bufferResult).map((value) => {
-  //   const [timeStringName, buffer] = value;
-  //   const fileName = timeStringName.match(/(?<=\d\-\d\-).*/g)![0];
-
-  //   return { fileName, data: buffer };
-  // });
-
-  // console.log(arrayOfFiles[0].data);
-
-  // console.log(arrayOfFiles[0].data.toString());
-  // fs.writeFile(
-  //   __dirname + "upload.txt",
-  //   arrayOfFiles[0].data.toString(),
-  //   "utf-8",
-  //   (err) => {
-  //     if (err) console.log(err);
-  //   }
-  // );
 };
 
 export default cacheFile;
