@@ -1,6 +1,6 @@
 import { Context, Next } from "koa";
 import redisCli from "../models/redisCli";
-import { parseRequestFiles } from "../helpers/uploadFile";
+import { parseRequestFiles, removeTMPFiles } from "../helpers/uploadFile";
 
 const ONE_HOUR = 60 * 60;
 
@@ -10,6 +10,10 @@ const cacheFile = async (ctx: Context, next: Next) => {
   const bufferResult = await redisCli.hgetallBuffer(token);
 
   if (Object.keys(bufferResult).length) {
+    Object.values(ctx.request.files!).map((file: any) => {
+      removeTMPFiles(file);
+    });
+
     return next();
   }
 
@@ -21,7 +25,7 @@ const cacheFile = async (ctx: Context, next: Next) => {
   ]);
 
   return next();
-  
+
   // const arrayOfFiles = Object.entries(bufferResult).map((value) => {
   //   const [timeStringName, buffer] = value;
   //   const fileName = timeStringName.match(/(?<=\d\-\d\-).*/g)![0];
