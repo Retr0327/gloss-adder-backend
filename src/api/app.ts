@@ -4,7 +4,7 @@ import cors from "@koa/cors";
 import koaBody from "koa-body";
 import corsConfig from "./helpers/corsConfig";
 import { UPLOAD_DIR } from "./constants";
-import { uploadGloss } from "./routes/uploadGloss";
+import { rootRoute, uploadGloss } from "./routes";
 
 if (!fs.existsSync(UPLOAD_DIR)) {
   fs.mkdirSync(UPLOAD_DIR);
@@ -17,5 +17,7 @@ app.use(koaBody({ urlencoded: true, multipart: true }));
 
 app.use(uploadGloss.routes());
 app.use(uploadGloss.allowedMethods());
+app.use(rootRoute.routes());
+app.use(rootRoute.allowedMethods());
 
 export default app;
