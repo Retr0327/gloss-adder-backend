@@ -63,7 +63,7 @@ class GlossAdder {
     return content;
   }
 
-  async add() {
+  async add(): Promise<string> {
     const content = await this.readFile();
     const glaIndex = this.getGlaIndex(content);
     const data = this.searchItem(glaIndex, content);
