@@ -10,3 +10,10 @@ export type BufferEncoding =
   | "latin1"
   | "binary"
   | "hex";
+
+export type FileDataType =
+  | string
+  | NodeJS.ArrayBufferView
+  | Iterable<string | NodeJS.ArrayBufferView>
+  | AsyncIterable<string | NodeJS.ArrayBufferView>
+  | Stream;
