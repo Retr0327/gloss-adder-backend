@@ -3,7 +3,7 @@ import path from "path";
 import { Context } from "koa";
 import zipFiles from "../helpers/zipFiles";
 import { getUploadedFileDir } from "../constants";
-import removeUploadedFolder from "../helpers/removeUploadFolder";
+import removeUploadedFolder from "../helpers/download/removeUploadFolder";
 
 const handleDownload = async (ctx: Context) => {
   const { token } = ctx.params;

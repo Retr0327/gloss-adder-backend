@@ -1,5 +1,5 @@
 import fs from "fs";
-import { getUploadedFileDir } from "../constants";
+import { getUploadedFileDir } from "../../constants";
 
 async function removeUploadedFolder(token: string) {
   const downloadFolder = getUploadedFileDir(token);
