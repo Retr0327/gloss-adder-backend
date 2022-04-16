@@ -1,10 +1,10 @@
 import Redis from "ioredis";
 import { dockerEnv } from "../constants";
 
-const { redisHost, redisPort } = dockerEnv;
+const { period, redisHost, redisPort } = dockerEnv;
 
 const redisConfig = () => {
-  if (process.env.NODE_ENV === "production") {
+  if (period === "production") {
     return `redis://${redisHost}:${redisPort}`;
   }
   return "";
