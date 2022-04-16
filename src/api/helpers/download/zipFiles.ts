@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import archiver from "archiver";
-import { getUploadedFileDir } from "../constants";
+import { getUploadedFileDir } from "../../constants";
 
 async function zipFiles(token: string) {
   const uploadLocation = getUploadedFileDir(token);

@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { Context } from "koa";
-import zipFiles from "../helpers/zipFiles";
+import zipFiles from "../helpers/download/zipFiles";
 import { getUploadedFileDir } from "../constants";
 import removeUploadedFolder from "../helpers/download/removeUploadFolder";
 
