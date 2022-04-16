@@ -1,9 +1,8 @@
 import fs from "fs";
 import path from "path";
 import { Context } from "koa";
-import zipFiles from "../helpers/download/zipFiles";
 import { getUploadedFileDir } from "../constants";
-import removeUploadedFolder from "../helpers/download/removeUploadFolder";
+import { zipFiles, removeUploadedFolder } from "../helpers/download";
 
 const handleDownload = async (ctx: Context) => {
   const { token } = ctx.params;
