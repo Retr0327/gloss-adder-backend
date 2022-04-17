@@ -6,7 +6,7 @@ const getUploadedFileDir = (name: string) => path.resolve(UPLOAD_DIR, name);
 const dockerEnv = {
   redisHost: process.env.REDIS_HOST,
   redisPort: process.env.REDIS_PORT,
-  koaPort: process.env.KOA_PORT,
+  port: process.env.PORT,
   period: process.env.NODE_ENV,
 };
 
