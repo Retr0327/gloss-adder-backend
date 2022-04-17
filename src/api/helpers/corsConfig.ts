@@ -6,7 +6,7 @@ const corsConfig: Options = {
       return "*";
     }
 
-    return "http://localhost:3001";
+    return "http://client";
   },
   credentials: true,
   allowMethods: ["GET", "POST"],
