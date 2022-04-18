@@ -19,7 +19,8 @@
     "koa": "^2.13.4",
     "koa-body": "^4.2.0",
     "morgan": "^1.10.0",
-    "supertest": "^6.2.2"
+    "supertest": "^6.2.2",
+    "ts-jest": "^27.1.4"
   },
   "devDependencies": {
     "@types/archiver": "^5.3.1",
