@@ -15,10 +15,10 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "types": ["./src/typings.d.ts"],
+      "types": ["./src/typings.d.ts", "jest", "reflect-metadata"],
       "controllers/*": ["./src/controllers/*"]
     }
   },
-  "include": ["./src/**/*.ts"],
+  "include": ["./src/**/*.ts", "./test/**/*.test.ts"],
   "exclude": ["node_modules"]
 }
