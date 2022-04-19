@@ -11,9 +11,9 @@ beforeAll(() => {
   token = new Date().getTime().toString();
   mockFileName = mockFileName = `${token}-${0}-mock.txt`;
 });
+
 afterEach(() => {
-  redisCli.del(token);
-  server.close();
+  Promise.all([redisCli.del(token), server.close()]);
 });
 
 describe("Post /uploadGloss", () => {
