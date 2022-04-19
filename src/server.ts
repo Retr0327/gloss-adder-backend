@@ -5,6 +5,8 @@ const { port } = dockerEnv;
 
 const PORT = port || 3000;
 
-export default app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
+
+export default server
