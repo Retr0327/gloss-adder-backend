@@ -5,7 +5,7 @@ const checkHasFile = async (ctx: Context, next: Next) => {
 
   if (!hasFile) {
     ctx.status = 400;
-    ctx.body = { status: "failed", msg: "No file uploaded" };
+    ctx.body = { status: "failed", message: "No file uploaded" };
     return 
   }
 

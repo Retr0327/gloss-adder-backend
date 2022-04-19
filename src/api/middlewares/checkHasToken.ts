@@ -5,7 +5,7 @@ const checkHasToken = async (ctx: Context, next: Next) => {
 
   if (!token) {
     ctx.status = 400;
-    ctx.body = { status: "failed", msg: "No download token" };
+    ctx.body = { status: "failed", message: "No download token" };
     return;
   }
 
