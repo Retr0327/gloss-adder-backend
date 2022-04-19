@@ -1,6 +1,6 @@
 import request from "supertest";
-import server from "../../src/server";
-import redisCli from "../../src/api/models/redisCli";
+import server from "src/server";
+import redisCli from "src/api/models/redisCli";
 
 let token: string;
 let mockFileName: string;
