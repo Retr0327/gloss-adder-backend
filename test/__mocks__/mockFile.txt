@@ -1,0 +1,17 @@
+SID= （3-1）a.
+ORG= nipu’a kee sua pa’ici.
+OEX= ni-pu’a=kee sua pa’ici
+CEX= 完成貌- 買=他. 屬格 主格 酒
+CHS= 酒他買的。
+
+SID= （3-1）b.
+ORG= te musu kʉnʉn tammi isi.
+OEX= te=musu kʉnʉ-ʉn tammi isi
+CEX= 非實現=你. 屬格 吃- 受事焦點 地瓜 這
+CHS= 你要吃這個地瓜。
+
+SID= （3-1）c.
+ORG= koo musu kʉnʉn tammi isi.
+OEX= koo=musu kʉnʉ-ʉn tammi isi
+CEX= 否定詞=你. 屬格 吃- 受事焦點 地瓜 這
+CHS= 你沒有吃這個地瓜。
