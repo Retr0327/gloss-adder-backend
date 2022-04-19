@@ -1,6 +1,10 @@
 import request from "supertest";
 import app from "../../src/server";
 
+afterAll(async () => {
+  app.close();
+});
+
 describe("Test root /", () => {
   test("should return success and ip", async () => {
     const response = await request(app).get("/");
