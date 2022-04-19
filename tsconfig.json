@@ -15,10 +15,11 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "src/*": ["./src/*"],
       "types": ["./src/typings.d.ts"],
       "controllers/*": ["./src/controllers/*"]
     }
   },
-  "include": ["./src/**/*.ts", "./test/**/*.test.ts"],
+  "include": ["./src/**/*.ts", "./test/**/*.ts"],
   "exclude": ["node_modules"]
 }
