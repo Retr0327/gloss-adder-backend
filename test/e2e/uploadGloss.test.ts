@@ -11,13 +11,13 @@ beforeAll(() => {
   token = new Date().getTime().toString();
   mockFileName = mockFileName = `${token}-${0}-mock.txt`;
 });
-afterAll(() => {
+afterEach(() => {
   redisCli.del(token);
   server.close();
 });
 
 describe("Post /uploadGloss", () => {
-  test(`should return { status: "failed", msg: "No file uploaded" }`, async () => {
+  test(`should return success`, async () => {
     const response = await request(server)
       .post("/uploadGloss")
       .field("token", token)
@@ -26,5 +26,15 @@ describe("Post /uploadGloss", () => {
     expect(response.statusCode).toEqual(200);
     expect(response.body).toHaveProperty("token");
     expect(response.body).toHaveProperty("firstFileName");
+  });
+
+  test(`should return { status: 'failed', message: "No download token" }`, async () => {
+    const response = await request(server)
+      .post("/uploadGloss")
+      .attach(mockFileName, testFileDir);
+
+    expect(response.statusCode).toEqual(400);
+    expect(response.body.status).toBe("failed");
+    expect(response.body.message).toBe("No download token");
   });
 });
