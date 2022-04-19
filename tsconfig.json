@@ -15,7 +15,7 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "types": ["./src/typings.d.ts", "jest", "reflect-metadata"],
+      "types": ["./src/typings.d.ts"],
       "controllers/*": ["./src/controllers/*"]
     }
   },
