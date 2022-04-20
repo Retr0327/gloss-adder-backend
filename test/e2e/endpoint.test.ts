@@ -1,6 +1,7 @@
 import request from "supertest";
 import server from "src/server";
 import redisCli from "src/api/models/redisCli";
+import { removeUploadedFolder } from "src/api/helpers/download";
 
 let token: string;
 let mockFileName: string;
@@ -16,7 +17,7 @@ afterEach(() => {
   Promise.all([redisCli.del(token), server.close()]);
 });
 
-describe("Post /uploadGloss", () => {
+describe("POST /uploadGloss", () => {
   test(`should return success`, async () => {
     const response = await request(server)
       .post("/uploadGloss")
@@ -33,8 +34,22 @@ describe("Post /uploadGloss", () => {
       .post("/uploadGloss")
       .attach(mockFileName, testFileDir);
 
+    const actual = { status: "failed", message: "No download token" };
+
     expect(response.statusCode).toEqual(400);
-    expect(response.body.status).toBe("failed");
-    expect(response.body.message).toBe("No download token");
+    expect(response.body).toMatchObject(actual);
+  });
+});
+
+describe("GET /download", () => {
+  test("should return success", async () => {
+    const response = await request(server).get(`/download/${token}`);
+    expect(response.statusCode).toEqual(200);
+    removeUploadedFolder(token);
+  });
+
+  test("should return false", async () => {
+    const res = await request(server).get(`/download/`);
+    expect(res.statusCode).toEqual(404);
   });
 });
