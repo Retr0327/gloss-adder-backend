@@ -24,4 +24,38 @@ subgraph DOCKER [Docker Network]
 end
 
 ```
+## **Setup**
+### 1. Download the both frontend and backend projects: 
+
+```bash
+git clone git@github.com:Retr0327/gloss-adder-frontend.git
+git clone git@github.com:Retr0327/gloss-adder-backend.git
+```
+Hence, the project strucutre should look like this: 
+
+```
+gloss-adder-frontend\        
+ |-- public\              # Some static files
+ |-- src\                 # Source files
+ |-- ...
+gloss-adder-backend\
+ |-- deployment\          # Deployment folder
+ |-- src\                 # Source files
+ |-- test\                # Automated tests
+ |-- ...
+```
+
+### 2. Use docker to run:
+Install docker, and use the following command to run:
+
+```bash
+docker compose up 
+```
+
+
+
+
+
+
+
 
