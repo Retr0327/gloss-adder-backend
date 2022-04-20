@@ -48,6 +48,8 @@ gloss-adder-backend\
 ### 2. Use docker to run:
 Install docker, and use the following command to run:
 
+> Remember to run the command in the backend folder!
+ 
 ```bash
 docker compose up 
 ```
