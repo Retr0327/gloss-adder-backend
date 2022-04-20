@@ -49,7 +49,7 @@ describe("GET /download", () => {
   });
 
   test("should return false", async () => {
-    const res = await request(server).get(`/download/`);
-    expect(res.statusCode).toEqual(404);
+    const response = await request(server).get(`/download/`);
+    expect(response.statusCode).toEqual(404);
   });
 });
