@@ -8,7 +8,7 @@ subgraph Internet
     D[Client]
 end
 
-subgraph DOCKER [Docker Network]
+subgraph DOCKER [Docker]
 
   D --> N{"Load Balancer <br/> (Nginx)"}
 
