@@ -1,3 +1,5 @@
+import { Stream } from "stream";
+
 export type BufferEncoding =
   | "ascii"
   | "utf8"
